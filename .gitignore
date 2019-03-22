@@ -102,3 +102,13 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# VS Code
+.vscode
+
+# Big Data
+/data/*.zip
+/data/all_data
+
+# Mac OSX
+.DS_Store
