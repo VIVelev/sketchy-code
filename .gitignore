@@ -110,5 +110,8 @@ venv.bak/
 /data/*.zip
 /data/all_data
 
+# Model Weight
+/src/weights/*.hdf5
+
 # Mac OSX
 .DS_Store
