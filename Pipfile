@@ -12,9 +12,9 @@ yapf = "*"
 [packages]
 numpy = "*"
 matplotlib = "*"
+opencv-python = "*"
 keras = "*"
 tensorflow = "*"
-pillow = "*"
 h5py = "*"
 pydot = "*"
 
