@@ -6,8 +6,6 @@ verify_ssl = true
 [dev-packages]
 jupyter = "*"
 pylint = "*"
-jupyter-contrib-nbextensions = "*"
-yapf = "*"
 
 [packages]
 numpy = "*"
