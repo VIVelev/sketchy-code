@@ -7,9 +7,11 @@ __all__ = [
 
 
 def get_preprocessed_img(img_path, image_size=(256, 256)):
-    img_rgb = cv2.imread(img_path)
-    img_rgb = cv2.resize(img_rgb, image_size)
-    return img_rgb
+    img = cv2.imread(img_path)
+    img = cv2.resize(img, image_size)
+    img = img.astype('float32')
+    img /= 255
+    return img
 
 def show(img_path):
     image = cv2.imread(img_path)
