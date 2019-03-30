@@ -1,5 +1,7 @@
 import json
+
 from ..node import Node
+from .render import render_content_with_text
 
 __all__ = [
     'Compiler',
@@ -17,7 +19,7 @@ class Compiler:
 
         self.root = Node('body', None, self.content_holder)
 
-    def compile(self, input_file_path, output_file_path, rendering_function=None):
+    def compile(self, input_file_path, output_file_path, render_function=render_content_with_text):
         dsl_file = open(input_file_path)
         current_parent = self.root
 
@@ -33,12 +35,13 @@ class Compiler:
 
             elif token.find(self.closing_tag) != -1:
                 current_parent = current_parent.parent
+
             else:
-                tokens = token.split(",")
+                tokens = token.split(',')
                 for t in tokens:
                     element = Node(t, current_parent, self.content_holder)
                     current_parent.add_child(element)
 
-        output_html = self.root.render(self.dsl_mapping, rendering_function=rendering_function)
+        output_html = self.root.render(self.dsl_mapping, render_function=render_function)
         with open(output_file_path, 'w') as output_file:
             output_file.write(output_html)
