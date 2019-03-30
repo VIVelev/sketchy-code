@@ -1,11 +1,17 @@
 header {
-btn-inactive, btn-inactive, btn-inactive, btn-inactive
+btn-inactive, btn-inactive, btn-inactive
 }
 row {
-double {
+quadruple {
 small-title, text, btn-orange
 }
-double {
+quadruple {
+small-title, text, btn-orange
+}
+quadruple {
+small-title, text, btn-orange
+}
+quadruple {
 small-title, text, btn-orange
 }
 }
@@ -15,16 +21,10 @@ small-title, text, btn-orange
 }
 }
 row {
-quadruple {
+double {
 small-title, text, btn-orange
 }
-quadruple {
-small-title, text, btn-orange
-}
-quadruple {
-small-title, text, btn-orange
-}
-quadruple {
+double {
 small-title, text, btn-orange
 }
 }
