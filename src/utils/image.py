@@ -1,4 +1,5 @@
 import cv2
+from .config import IMAGE_SIZE
 
 __all__ = [
     'get_preprocessed_img',
@@ -6,7 +7,7 @@ __all__ = [
 ]
 
 
-def get_preprocessed_img(img_path, image_size=(256, 256)):
+def get_preprocessed_img(img_path, image_size=IMAGE_SIZE[:-1]):
     img = cv2.imread(img_path)
 
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
