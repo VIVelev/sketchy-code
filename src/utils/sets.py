@@ -50,7 +50,7 @@ def init_idx2word(vocabulary):
     return {key: val for key, val in enumerate(vocabulary)}
 
 
-def data_generator(sketch_id_code_set, word2idx, batch_size, maxlen, vocabulary=None):
+def data_generator(sketch_id_code_set, word2idx, batch_size, maxlen, voc_size):
     """data generator, intended to be used in a call to model.fit_generator()"""
 
     X_img = np.zeros((batch_size, *IMAGE_SIZE))
@@ -84,7 +84,7 @@ def data_generator(sketch_id_code_set, word2idx, batch_size, maxlen, vocabulary=
 
                 # One-hot
                 Y_seq = [[
-                    to_categorical(idx, len(vocabulary)) for idx in sent
+                    to_categorical(idx, voc_size) for idx in sent
                 ] for sent in Y_seq]
 
                 yield [[X_img, X_seq], np.array(Y_seq)]
