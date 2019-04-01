@@ -13,11 +13,11 @@ __all__ = [
 class SketchEncoder:
     """Sketch Encoder
     
-    Sketch (Image) Enmbedding (Encoder) Model
+    Sketch (Image) Enmbedding (Encoder) Model.
     
     Parameters:
     -----------
-    embedding_dim : integer, the dimension in which to embed the sketch image and the tokens.
+    embedding_dim : integer, the dimension in which to embed the sketch image and the tokens
     name : string, the name of the model, optional
     
     """

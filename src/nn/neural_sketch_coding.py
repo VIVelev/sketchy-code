@@ -18,7 +18,7 @@ class NeuralSketchCoding:
     
     Parameters:
     -----------
-    embedding_dim : integer, the dimension in which to embed the sketch image and the tokens.
+    embedding_dim : integer, the dimension in which to embed the sketch image and the tokens
     maxlen : integer, the maximum code length
     voc_size : integer, number of unique tokens in the vocabulary
     num_hidden_neurons : list with length of 2, specifying the number of hidden neurons in the LSTM decoders

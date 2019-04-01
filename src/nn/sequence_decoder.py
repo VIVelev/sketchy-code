@@ -3,7 +3,6 @@ from keras.layers import (LSTM, Activation, Dense, Dropout, Embedding, Input,
                           TimeDistributed)
 from keras.optimizers import RMSprop
 
-
 __all__ = [
     'SequenceDecoder',
 ]
@@ -12,12 +11,12 @@ __all__ = [
 class SequenceDecoder:
     """Sequence Deocder
     
-    Code Generating Model
+    Code Generating Model.
     
     Parameters:
     -----------
     maxlen : integer, the maximum code length
-    embedding_dim : integer, the dimension in which to embed the sketch image and the tokens.
+    embedding_dim : integer, the dimension in which to embed the sketch image and the tokens
     voc_size : integer, number of unique tokens in the vocabulary
     num_hidden_neurons : list with length of 2, specifying the number of hidden neurons in the LSTM decoders
     name : string, the name of the model, optional
