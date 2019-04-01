@@ -11,7 +11,11 @@ __all__ = [
 
 
 class SketchEncoder:
+
     def __init__(self, embedding_dim, name='sketch_encoder'):
+        self.embedding_dim = embedding_dim
+        self.name = name
+
         self.image_input = Input(IMAGE_SIZE, name='image_input')
 
         self.conv_32_1 = Conv2D(32, (3, 3), activation='relu', padding='valid', name='conv_32_1')
@@ -40,7 +44,6 @@ class SketchEncoder:
         self.dense_relu_encoder = Dense(embedding_dim, activation='relu', name='dense_relu_encoder')
         self.embedding_reshapor = Reshape((1, embedding_dim), name='embedding_reshapor')
 
-        self.name = name
         self.model = None
 
     def build_model(self):

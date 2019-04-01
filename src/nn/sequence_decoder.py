@@ -10,7 +10,14 @@ __all__ = [
 
 
 class SequenceDecoder:
+
     def __init__(self, maxlen, embedding_dim, voc_size, num_hidden_neurons, name='sequence_decoder'):
+        self.maxlen = maxlen
+        self.embedding_dim = embedding_dim
+        self.voc_size = voc_size
+        self.num_hidden_neurons = num_hidden_neurons
+        self.name = name
+
         self.sequence_input = Input((maxlen,), name='sequence_input')
         self.sketch_embedding_input = Input((1, embedding_dim), name='sketch_embedding_input')
         
@@ -30,7 +37,6 @@ class SequenceDecoder:
         self.dense_decoder = TimeDistributed(Dense(voc_size, name='dense_layer'), name='dense_decoder')
         self.softmax_decoder = TimeDistributed(Activation('softmax', name='softmax_layer'), name='softmax_decoder')
 
-        self.name = name
         self.model = None
 
     def build_model(self):
