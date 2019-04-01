@@ -15,7 +15,7 @@ class NSCInference:
     Parameters:
     -----------
     neural_sketch_coding : the trained model
-    word2idx : a dictionary mapping from vocabulary word to uniques indexes
+    word2idx : dictionary, mapping from vocabulary word to uniques indexes
     
     """
 
