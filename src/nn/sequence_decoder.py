@@ -10,7 +10,7 @@ __all__ = [
 
 
 class SequenceDecoder:
-    def __init__(self, maxlen, embedding_dim, voc_size, num_hidden_neurons, name='sequence_encoder'):
+    def __init__(self, maxlen, embedding_dim, voc_size, num_hidden_neurons, name='sequence_decoder'):
         self.sequence_input = Input((maxlen,), name='sequence_input')
         self.sketch_embedding_input = Input((1, embedding_dim), name='sketch_embedding_input')
         
