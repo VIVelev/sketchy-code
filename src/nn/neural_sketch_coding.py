@@ -33,9 +33,11 @@ class NeuralSketchCoding:
         self.num_hidden_neurons = num_hidden_neurons
         self.name = name
 
+        # Inputs
         self.image_input = Input(IMAGE_SIZE, name='image_input')
         self.sequence_input = Input((maxlen,), name='sequence_input')
 
+        # Encoder / Decoder
         self.sketch_encoder = SketchEncoder(embedding_dim).build_model()
         self.sequence_decoder = SequenceDecoder(maxlen, embedding_dim, voc_size, num_hidden_neurons).build_model()
 
