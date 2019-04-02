@@ -5,7 +5,7 @@ __all__ = [
 ]
 
 
-def pencil_sketch(path_to_img, width, height, bg_gray='./preprocess/pencilsketch_bg.jpg'):
+def pencil_sketch(path_to_img, width, height, bg_gray='./pencilsketch_bg.jpg'):
     """Pencil sketch effect
 
     Applies a pencil sketch effect to an image.
