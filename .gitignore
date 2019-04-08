@@ -108,7 +108,7 @@ venv.bak/
 
 # Big Data
 /data/*.zip
-/data/all_data
+/data/toy_dataset
 
 # Model Weight
 /src/weights/*.hdf5
